@@ -1,0 +1,184 @@
+/* Paleta de colores
+   Blanco hueso: #f7f3e9
+   Dorado oro: #c5a200
+   Negro carbón: #111111
+   Azul zafiro: #0f52ba
+   Rosado cuarzo: #e8c4d8
+*/
+.banner-header img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 4px solid #7a4c76;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fbd4f9;
+  color: #111111;
+}
+
+/* Banner superior */
+.banner-header {
+  background: linear-gradient(135deg, #e8c4d8, #f5b0df);
+  padding: 50px 20px;
+  text-align: center;
+  border-bottom: 4px solid #864f83;
+}
+.banner-header h1 {
+  font-size: 34px;
+  margin: 0;
+  color: #0f52ba;
+}
+.banner-header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  max-width: 8000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(4, 1, 9, 0.1);
+  border-left: 80px solid #f69bdc;
+  border-right: 80px solid #f69bdc;
+  border-width: 40px solid #f69bdc;
+}
+.form-container h2 {
+  margin-top: 0;
+  color: #000000;
+}
+.form-group {
+  margin-bottom: 20px;
+  border-bottom: 15px;
+}
+.form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background: #fdfbf7;
+}
+textarea {
+  height: 130px;
+  resize: none;
+}
+
+/* Botón enviar */
+.btn-send {
+  background-color: #cc00ff;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-send:hover {
+  background-color: #ffffff;
+}
+
+/* Banner intermedio */
+.banner-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajusta la altura del banner */
+    overflow: hidden;
+}
+
+.banner-video video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Hace que el video llene el espacio sin deformarse */
+}
+
+.contenido-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+/* Testimonio */
+.testimonial {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}
+.testimonial p {
+  font-size: 22px;
+  color: #333;
+}
+.author {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0f52ba;
+}
+
+/* Información de contacto */
+.contact-info {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #684567;
+}
+.contact-info h3 {
+  font-size: 26px;
+  color: #9e8c06;
+}
+.contact-info p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.contact-info a {
+  color: #e78fef;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Botón volver */
+.btn-volver {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  padding: 12px 20px;
+  background: #000000;
+  color: rgb(255, 253, 253);
+  text-decoration: none;
+  font-size: 30px;
+  border-radius:30px;
+  border-left: 15px solid #4eacd7;
+  border-right:15px solid #4eacd7;
+  transition: 0.2s;
+
+}
+.btn-volver:hover {
+  background: #4eacd7;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#030301;
+  font-weight: 200px;
+}

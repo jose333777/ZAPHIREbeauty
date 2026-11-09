@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Golden Brown</title>
+   <style>
+    body {
+        
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(circle, #795959 60%, #795959);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Arial Black', Impact, sans-serif;
+        overflow: hidden;
+    }
+
+    #letra {
+        font-size: 4rem;
+        font-weight: 1000;
+        text-align: center;
+        color: #d1cdcd;
+        text-transform: uppercase;
+
+        text-shadow:
+            0 0 5px #fff,
+            0 0 15px #def2f3,
+            0 0 30px #fafcfc,
+            0 0 60px #ffffff;
+
+        animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0.4;
+            text-shadow:
+                0 0 100px #fff,
+                0 0 100px #e0f5f6,
+                0 0 100px #daeaeb;
+        }
+        100% {
+            opacity: 1;
+            text-shadow:
+                0 0 100px #fff,
+                0 0 100px #c2cacb,
+                0 0 100px #ecf8f9,
+                0 0 100px #f2f7f7;
+        }
+    }
+
+</style>
+
+    </style>
+</head>
+<body>
+
+<div id="letra"></div>
+
+<script>
+    const cancion = [
+        { texto: "I Wanna Da-💃", espera: 500 },
+        { texto: "I Wanna Dance In the Lights", espera: 2600 },
+        { texto: "I Wanna Ro-", espera: 1000 },
+        { texto: "I Wanna Rock Your Body", espera: 3300 },
+        { texto: "I Wanna Go-", espera: 1000 },
+        { texto: "I Wanna Go For a Ride", espera: 2000 },
+        { texto: "Hop in the Music", espera: 1300 },
+        { texto: "And Rock Your Body", espera: 3300 },
+        { texto: "RIGHT", espera: 0 },
+        { texto: "Rock Your Body", espera: 900 },
+        { texto: "Common", espera: 0 },
+        { texto: "Common", espera: 200 },
+        { texto: "ROCK THAT BODY", espera: 800 },
+        { texto: "ROCK THAT BODY", espera: 800 },
+        { texto: "ROCK YO' BODY", espera: 1000 },
+    ];
+
+    const letraDiv = document.getElementById("letra");
+    let i = 0;
+
+    function mostrarLetra() {
+        if (i < cancion.length) {
+            letraDiv.textContent = cancion[i].texto;
+            setTimeout(mostrarLetra, cancion[i].espera);
+            i++;
+        }
+    }
+
+    mostrarLetra();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='registro.css') }}">
+    <tittle>REGISTER</tittle>
+</head>
+<body>
+    <h2>REGISTER NOW</h2>
+    <form method="post">
+        <input type="text" name="username" placeholder="usuario" required><br>
+        <input type="password" name="password"  placeholder="Contraseña" required><br>  
+     <button type="submit">
+    <img src="{{ url_for('static', filename='img/fondo_de_los_botones_web.jpeg') }}" alt="REGISTRARSE" width="100">
+</button>
+     </form>
+     <a href="{{ url_for('login') }}">volver a iniciar sesion</a>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FONDO GENERAL */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* CONTENEDOR */
+form {
+    background-color: #161616;
+    padding: 30px 40px;
+    border-radius: 14px;
+    width: 320px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+/* TÍTULO */
+h2 {
+    position: absolute;
+    top: 60px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+/* EFECTO FOCUS */
+input:focus {
+    background-color: #2a2a2a;
+    box-shadow: 0 0 0 2px #5e17eb;
+}
+
+/* BOTÓN */
+button {
+    margin-top: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button img {
+    width: 100px;
+}
+
+/* HOVER BOTÓN */
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* LINK REGISTRO */
+a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #9b7cff;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

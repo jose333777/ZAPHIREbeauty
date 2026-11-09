@@ -1,0 +1,186 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'IM Fell English SC',serif;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(245,210,122,0.95) 0%,
+            rgba(212,162,79,0.9) 25%,
+            rgba(176,122,63,0.95) 45%,
+            rgba(122,74,46,0.98) 65%,
+            rgba(43,24,14,1) 100%
+        );
+}
+
+#escena {
+    position: relative;
+    text-align: center;
+}
+
+#letra {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    max-width: 80%;
+    line-height: 1.2;
+
+    text-shadow:
+        0 0 6px #fff,
+        0 0 18px rgba(255, 235, 180, 0.8),
+        0 0 35px rgba(255, 220, 150, 0.9),
+        0 0 60px rgba(255, 255, 255, 1);
+
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.45;
+        text-shadow:
+            0 0 20px rgba(255,255,255,0.7),
+            0 0 40px rgba(255,215,160,0.6);
+    }
+    100% {
+        opacity: 1;
+        text-shadow:
+            0 0 40px rgba(255,255,255,1),
+            0 0 80px rgba(255,215,160,0.9),
+            0 0 120px rgba(255,255,255,1);
+    }
+}
+
+#sticker {
+    width: 120px;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(500%);
+    transform-origin: top center;
+filter: drop-shadow(0 0 4px rgba(0,0,0,0.3)) saturate(150%) brightness(1.1) contrast(1.1);
+    display: block;
+}
+
+#watermark {
+    position: center;
+    inset: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; 
+
+    opacity: 0.26; 
+    z-index: 0;
+}
+
+    #watermark img {
+    width: 60%;
+    max-width: 600px;
+    filter: grayscale(100%) blur(0.3px);
+
+    animation: spin 60s linear infinite;
+    transform-origin: center center;
+}
+
+#escena {
+    z-index: 2;
+}
+
+ /* ===== MODO OSCURO (cuando cambia la canción) ===== */
+body.dark-mode {
+    background:
+        radial-gradient(circle at center,
+            rgba(40,60,120,0.95) 0%,
+            rgba(20,30,80,0.9) 25%,
+            rgba(10,15,50,0.95) 45%,
+            rgba(5,8,25,0.98) 65%,
+            rgba(0,0,0,1) 100%
+        );
+
+    transition: background 2.5s ease-in-out;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(500deg);
+    }
+}
+#letra {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#letra.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+#letra {
+    font-size: 4rem;
+    font-family: "Cinzel", serif;
+    letter-spacing: 0.2em;
+    text-shadow:
+        0 0 10px rgba(255, 215, 150, 0.6),
+        0 0 30px rgba(255, 200, 120, 0.3);
+}
+#letra {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+}
+
+#letra.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: 
+        opacity 1.6s ease,
+        transform 1.6s ease;
+}
+span.corner {
+    content: "";
+    position: fixed;
+    width: 25%;
+    height: 25%;
+    background: radial-gradient(circle, rgba(0,0,0,0.6), transparent 70%);
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    animation: cornerBlink 2s infinite alternate;
+}
+
+/* Animación de parpadeo */
+@keyframes cornerBlink {
+    0% { opacity: 0; }
+    25% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    75% { opacity: 0.4; }
+    100% { opacity: 0; }
+}
+
+/* ===== ESQUINAS BRILLANTES EN MODO OSCURO ===== */
+body.dark-mode span.corner {
+    background: radial-gradient(circle, rgba(255,255,200,0.6) 0%, rgba(255,255,200,0.1) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: cornerBlinkBright 2s infinite alternate;
+}
+
+
+@keyframes cornerBlinkBright {
+    0% { opacity: 0; }
+    25% { opacity: 0.6; }
+    50% { opacity: 0.10; }
+    75% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+

@@ -1,0 +1,108 @@
+/* ======= ESTILOS GENERALES ======= */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #ffffff, #ffcdf0, #e4dcea);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* ======= HEADER CON BANNER ======= */
+header {
+    background-image: url("imagenes/cientificocosmetico.avif"); /* ← Reemplaza imagen */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    color: #fff;
+    text-shadow: 1px 1px 4px black;
+    border-radius: 18px;
+    
+}
+
+header h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+/* ======= BANNER CENTRAL ======= */
+.banner-central {
+    background-image: url("imagenes/Banner\ para\ Mercado\ Shops\ Productos\ de\ Belleza\ Simple\ Blanco.png"); /* ← Reemplaza imagen */
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 250px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+/* ===== DESCRIPCIÓN BAJO EL BANNER ===== */
+.descripcion {
+    width: 90%;
+    margin: 12px auto;
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* ===== SECCIÓN DE MAPAS ===== */
+.cuadrantes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    margin: 100px auto;
+    gap: 50px;
+}
+
+.cuadrante {
+    background: #fff;
+    border: 19px solid rgb(238, 163, 233);
+    border-radius:29px;
+    padding: 22px;
+    transition: transform .3s, box-shadow .3s;
+    cursor: pointer;
+}
+
+.cuadrante:hover {
+    transform: scale(1.9);
+    box-shadow: 41px 20px 18px rgb(255, 255, 255);
+}
+
+.cuadrante h3 {
+    margin: 10px 0;
+    color: #203a70;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ===== BANNER FINAL ===== */
+.banner-final {
+    background-image: url("banner-inferior.jpg"); /* ← Reemplázalo */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 220px;
+    margin-top: 50px;
+}
+
+/* ===== BOTÓN VOLVER CENTRADO ===== */
+.btn-volver {
+    display: block;
+    text-align: center;
+    width: 200px;
+    margin: 40px auto;
+    padding: 12px 0;
+    background: #203a70;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background: #ff6ad8;
+    transform: scale(1.1);
+}

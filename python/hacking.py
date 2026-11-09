@@ -1,0 +1,9 @@
+#Funcion SI
+nota = 3.8
+
+if nota >= 4.5:
+    print("Excelente")
+elif nota >= 3.0:
+    print("Aprobaste")
+else:
+    print("Reprobaste")

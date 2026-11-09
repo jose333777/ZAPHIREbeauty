@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JaVam IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatstyle.css') }}">
+</head>
+
+<body> 
+    <h2>Chat with JaVam</h2>
+
+    <div class="chat-box">
+        {% for msg in historial %}
+            {% if msg.sender == "user" %}
+                <div class="msg user">
+                    <strong>You:</strong> {{ msg.content }}
+                </div>
+            {% else %}
+                <div class="msg ia">
+                    <strong>IA:</strong> {{ msg.content }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <form method="POST">
+        <input type="text" name="mensaje" placeholder="Escribe tu mensaje..." required>
+        <button type="submit">Send</button>
+    </form>
+
+    <a href="{{ url_for('logout') }}">Close session</a>
+</body>
+</html>
+

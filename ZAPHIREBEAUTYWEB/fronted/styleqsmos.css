@@ -1,0 +1,177 @@
+/* PALETA LUJOSA */
+:root{
+    --rosa: #ee5ca7;      /* rosado premium juvenil */
+    --rosa-claro: #ffbddd;/* brillo */
+    --azul: #08346c;      /* zafiro */
+    --azul-light: #2159a6;
+    --hueso: #f8f7f2;     /* fondo */
+    --dorado: #d4af37;    /* acento exclusivo */
+}
+
+/* BASE GENERAL */
+body{
+    background: var(--hueso);
+    font-family: "Bodoni MT", serif;
+    text-align:center;
+    margin:0;
+    animation: fade 1s ease-in;
+}
+
+/* ANIMACIÓN DE ENTRADA SUAVE */
+@keyframes fade{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* harder */
+header{
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+                url('imagenes/BANNERZAPHIRE2.png');  /* Mockup con tu marca */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 480px;
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    text-align: center;
+    text-decoration: ;
+    font-size:90px;
+
+    /* ✨ Suave efecto de entrada */
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+/* Título elegante */
+header h1{
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(255,255,255,0.9);
+}
+
+/* Subtítulo */
+header p{
+    font-size: 1.3rem;
+    opacity: .9;
+    margin-top: 10px;
+}
+
+/* Animación suave */
+@keyframes fadeIn{
+    from{opacity:0; transform: translateY(35px);}
+    to{opacity:1; transform: translateY(0);}
+}
+
+}
+
+    color:white;
+    border-bottom:5px solid var(--dorado);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+header h1, header h2{
+    font-size:40px;
+    letter-spacing:4px;
+    text-shadow:0px 2px 8px rgba(0,0,0,.4);
+}
+
+/* LOGO */
+.logo{
+    width:150px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,.4));
+    transition:.3s;
+}
+.logo:hover{ transform:scale(1.08); }
+
+/* TARJETAS DE INICIO */
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:60px;
+}
+
+.card{
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(10px);
+    border:1px solid var(--dorado);
+    padding:30px;
+    width:270px;
+    border-radius:18px;
+    font-size:22px;
+    text-decoration:none;
+    color:var(--azul);
+    transition:.35s;
+    box-shadow:0 4px 20px rgba(0,0,0,.12);
+}
+.card:hover{
+    transform:translateY(-8px) scale(1.05);
+    background:var(--rosa);
+    color:black;
+    border-color:black;
+    box-shadow:0 15px 35px rgba(0,0,0,.28);
+}
+
+/* SECCIONES DE PRODUCTOS / VIDEOS */
+.grid{
+    background-color:black;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    padding:50px;
+}
+
+.prod-card, .video-card{
+    background:#005070;
+    padding:35px;
+    border-radius:50px;
+    font-size:20px;
+    border:2px solid var(--azul);
+    box-shadow:0 20px 80px rgba(212, 10, 10, 0.15);
+    transition:.2s;
+}
+.prod-card:hover, .video-card:hover{
+    transform:scale(1.26);
+    border-color:var(--dorado);
+    box-shadow:0 10px 30px rgba(0,0,0,.28);
+}
+
+/* PÁRRAFOS INFORMACIÓN */
+.info{
+    padding: 30px;px;
+    font-size:40px;
+    line-height:1.6;
+    max-width:100000px;
+    margin:auto;
+    background-position: center;
+    
+}
+
+/* BOTONES */
+.btn-volver{
+    display:inline-block;
+    margin:50px auto;
+    background:var(--azul);
+    color:white;
+    padding:12px 35px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:20px;
+    transition:.3s;
+}
+.btn-volver:hover{
+    background:var(--dorado);
+    color:black;
+}
+
+body {
+    background-color: #EEC9D2; /* Rosa cuarzo */
+}

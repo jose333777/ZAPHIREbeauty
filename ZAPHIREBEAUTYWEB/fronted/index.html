@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ZAPHIRE Cosmetics — Lip Combos Luxe</title>
+  <meta name="description" content="ZAPHIRE — Lip Combos de lujo. Elegancia joven, exclusividad y calidad premium." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230B0B0D%22/><text x=%2250%25%22 y=%2255%25%22 font-size=%2248%22 text-anchor=%22middle%22 fill=%22%23D7B56D%22 font-family=%22Playfair%22>Z</text></svg>">
+
+  <style>
+    :root{
+      --negro: #0B0B0D;
+      --zafiro: #1C2CA8;
+      --champagne: #D7B56D;
+      --blanco: #F8F7F2;
+      --gris-oscuro: #111113;
+      --muted: rgba(248,247,242,0.85);
+      --max-width: 1200px;
+      --radius: 12px;
+    }
+
+    /* Reset simple */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--negro);
+      color: var(--blanco);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    a{color:inherit; text-decoration:none}
+
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* HEADER */
+    header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(to bottom, rgba(11,11,13,0.85), rgba(11,11,13,0.65));
+      border-bottom: 1px solid rgba(215,181,109,0.08);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo-mark{
+      width:48px;
+      height:48px;
+      border-radius:10px;
+      background: linear-gradient(135deg,var(--zafiro), #0e1a6b 60%, var(--negro));
+      display:grid;
+      place-items:center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5), inset 0 -6px 18px rgba(0,0,0,0.25);
+      border:1px solid rgba(215,181,109,0.06);
+    }
+    .logo-mark strong{ color:var(--champagne); font-family:"Playfair Display", serif; font-weight:700; letter-spacing:2px;}
+
+    .brand h1{
+      margin:0;
+      font-family:"Playfair Display", serif;
+      font-weight:600;
+      letter-spacing:6px;
+      color:var(--champagne);
+      font-size:20px;
+    }
+
+    nav.desktop{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    nav.desktop a{ color:var(--muted); font-weight:500; font-size:15px}
+    nav.desktop a:hover{ color:var(--champagne) }
+
+    .cta{
+      background: linear-gradient(90deg,var(--champagne), #f4d89d);
+      color: #0b0b0d;
+      padding:10px 16px;
+      border-radius:10px;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+      box-shadow: 0 6px 18px rgba(215,181,109,0.12);
+    }
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:30px;
+      align-items:center;
+      padding:56px 0 40px;
+    }
+
+    .hero-inner{
+      display:flex;
+      gap:32px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .hero-left{
+      flex:1 1 420px;
+    }
+
+    .super-title{
+      font-family:"Playfair Display", serif;
+      font-size:18px;
+      color:var(--champagne);
+      letter-spacing:4px;
+      margin:0 0 14px 0;
+    }
+    .hero-title{
+      font-family:"Playfair Display", serif;
+      font-size:48px;
+      margin:0 0 14px 0;
+      letter-spacing:6px;
+      color:var(--blanco);
+      line-height:1;
+    }
+    .hero-sub{
+      color:var(--muted);
+      margin: 0 0 22px 0;
+      max-width:540px;
+    }
+
+    .actions{ display:flex; gap:12px; align-items:center; flex-wrap:wrap }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--champagne), #f4d89d);
+      color: var(--negro);
+      border:none;
+      padding:12px 20px;
+      font-weight:700;
+      border-radius:10px;
+      cursor:pointer;
+    }
+    .btn-outline{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.08);
+      color:var(--muted);
+      padding:12px 18px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    .hero-right{
+      flex:0 1 420px;
+      display:grid;
+      gap:12px;
+      justify-items:center;
+    }
+    .mockup{
+      width:320px;
+      height:320px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(28,44,168,0.12), rgba(11,11,13,0.6));
+      border:1px solid rgba(255,255,255,0.03);
+      display:grid;
+      place-items:center;
+      box-shadow: 0 18px 60px rgba(2,6,34,0.6);
+      overflow:hidden;
+    }
+    .mockup img{ width:85%; transform:translateY(6px); }
+
+    /* SECCIONES */
+    section{ padding:56px 0; }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:28px;
+    }
+    .section-title h2{
+      margin:0;
+      color:var(--champagne);
+      font-family:"Playfair Display", serif;
+      letter-spacing:4px;
+      font-size:28px;
+    }
+    .section-title p{ color:var(--muted); margin-top:8px }
+
+    /* GRID PRODUCTOS */
+    .grid{
+      display:grid;
+      gap:22px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:14px;
+      border:1px solid rgba(215,181,109,0.06);
+      transition: transform .28s ease, box-shadow .28s ease;
+      overflow:hidden;
+      position:relative;
+    }
+    .card:hover{ transform: translateY(-8px); box-shadow: 0 30px 60px rgba(2,6,34,0.6) }
+
+    .card img{ width:100%; height:200px; object-fit:cover; border-radius:10px; display:block }
+    .card h3{ margin:12px 0 6px 0; font-size:18px; color:var(--blanco); font-weight:700; font-family:"Playfair Display", serif }
+    .card p{ margin:0; color:var(--muted); font-size:14px }
+
+    .price{
+      margin-top:10px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:space-between;
+    }
+    .price .amount{ font-weight:700; color:var(--champagne) }
+    .card .small{ font-size:12px; color:rgba(248,247,242,0.6) }
+
+    .tag{
+      position:absolute;
+      top:12px;
+      left:12px;
+      background: rgba(28,44,168,0.12);
+      color: var(--zafiro);
+      padding:6px 10px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:12px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* GALLERY */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      gap:10px;
+    }
+    .gallery img{ width:100%; height:160px; object-fit:cover; border-radius:10px; display:block; border:1px solid rgba(255,255,255,0.02) }
+
+    /* SOBRE NOSOTROS */
+    .about{
+      display:grid;
+      gap:20px;
+      grid-template-columns: 1fr 1fr;
+      align-items:center;
+    }
+    .about .card-about{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      padding:24px;
+      border-radius:14px;
+      border:1px solid rgba(215,181,109,0.05);
+    }
+    .about h3{ font-family:"Playfair Display", serif; color:var(--champagne) }
+
+    /* NEWSLETTER / CONTACT */
+    .newsletter{
+      background: linear-gradient(180deg, rgba(28,44,168,0.06), rgba(11,11,13,0.75));
+      border-radius:14px;
+      padding:22px;
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .newsletter input[type="email"]{
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      background:transparent;
+      color:var(--blanco);
+      min-width:260px;
+    }
+    .newsletter button{ background:var(--champagne); color:var(--negro); border:none; padding:12px 16px; border-radius:10px; cursor:pointer; font-weight:700 }
+
+    /* FOOTER */
+    footer{
+      padding:28px 0 80px;
+      border-top:1px solid rgba(215,181,109,0.05);
+      margin-top:20px;
+      color:rgba(248,247,242,0.75);
+      font-size:14px;
+    }
+
+    /* Modal product */
+    .modal{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background: rgba(3,6,18,0.7);
+      z-index:80;
+    }
+    .modal.open{ display:flex }
+    .modal-card{
+      width:92%;
+      max-width:920px;
+      background:linear-gradient(180deg, #0b0b0d, #0b0b0d);
+      border-radius:14px;
+      padding:20px;
+      border:1px solid rgba(215,181,109,0.06);
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+    }
+    .modal .img{ border-radius:10px; overflow:hidden; }
+    .modal .img img{ width:100%; height:100%; object-fit:cover; display:block }
+    .modal .info h3{ margin-top:0; font-family:"Playfair Display", serif; color:var(--champagne) }
+    .close-btn{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-title{ font-size:38px }
+      .modal-card{ grid-template-columns: 1fr }
+      .about{ grid-template-columns: 1fr }
+    }
+    @media (max-width:560px){
+      .nav .cta{ display:none }
+      nav.desktop{ display:none }
+      .logo-mark{ width:42px; height:42px }
+      .hero-title{ font-size:32px }
+      .mockup{ width:260px; height:260px }
+    }
+
+    /* small animations */
+    .fade-in{ animation: fadeInUp .7s ease both }
+    @keyframes fadeInUp{ from{ opacity:0; transform:translateY(8px)} to{ opacity:1; transform:none } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo-mark"><strong>Z</strong></div>
+        <h1>ZAPHIRE</h1>
+      </div>
+
+      <nav class="desktop" aria-label="Menú principal">
+        <a href="#coleccion">Colección</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+        <button class="cta" onclick="document.getElementById('coleccion').scrollIntoView({behavior:'smooth'})">Comprar</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner fade-in">
+        <div class="hero-left">
+          <p class="super-title">EDICIÓN LUXE · 2025</p>
+          <h2 class="hero-title">ZAPHIRE COSMETICS</h2>
+          <p class="hero-sub">Elegancia joven, exclusiva y con presencia. Lip Combos diseñados para destacar — tonos ricos, fórmulas confortables y empaque premium.</p>
+          <div class="actions">
+            <button class="btn-primary" onclick="document.getElementById('coleccion').scrollIntoView({behavior:'smooth'})">Ver Colección</button>
+            <button class="btn-outline" onclick="openModal(previewProducts[1])">Ver Producto</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="mockup" aria-hidden="true">
+            <img src="imagenes/grupodeempresa.avif" alt="Mockup ZAPHIRE">
+          </div>
+          <div style="text-align:center; color:var(--muted)"><small>Empaque negro mate · foil champagne · interior zafiro</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLECCIÓN -->
+    <section id="coleccion">
+      <div class="section-title">
+        <h2>Lip Combos · Edición Luxe</h2>
+        <p>Combos seleccionados para cada ocasión — desde un nude sofisticado hasta un rojo intenso para la noche.</p>
+      </div>
+
+      <div class="grid fade-in" id="productos">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="tag">Más vendido</div>
+          <img src="imagenes/gloss_4256x4256.png" alt="Ruby Champagne">
+          <h3>Ruby Champagne</h3>
+          <p class="small">Rojo profundo · Acabado velvet</p>
+          <div class="price">
+            <span class="amount">$24.99</span>
+            <div>
+              <button class="close-btn" onclick="openModal(previewProducts[0])">Vista rápida</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="imagenes/glossgemaslarge.jpg" alt="Nude Velvet">
+          <h3>Nude Velvet</h3>
+          <p class="small">Nude cálido · Combinación matte + gloss</p>
+          <div class="price">
+            <span class="amount">$22.50</span>
+            <div>
+              <button class="close-btn" onclick="openModal(previewProducts[1])">Vista rápida</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="imagenes/glossluxury.webp" alt="Pink Luxe">
+          <h3>Pink Luxe</h3>
+          <p class="small">Rosa sofisticado · Efecto jugoso</p>
+          <div class="price">
+            <span class="amount">$23.50</span>
+            <div>
+              <button class="close-btn" onclick="openModal(previewProducts[2])">Vista rápida</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <img src="imagenes/balsamossinmarca.avif" alt="Vino Nocturno">
+          <h3>Vino Nocturno</h3>
+          <p class="small">Borgoña intenso · Edición premium</p>
+          <div class="price">
+            <span class="amount">$26.00</span>
+            <div>
+              <button class="close-btn" onclick="openModal(previewProducts[3])">Vista rápida</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT / NOSOTROS -->
+    <section id="nosotros">
+      <div class="section-title">
+        <h2>Nosotros</h2>
+        <p>ZAPHIRE nace para ofrecer labiales que combinan calidad, diseño y una experiencia sensorial premium. Hecho para quienes buscan elegancia sin comprometer modernidad.</p>
+      </div>
+
+      <div class="about container" style="max-width:var(--max-width)">
+        <div class="card-about fade-in">
+          <h3>Nuestra Filosofía</h3>
+          <p>Creemos que la belleza es una herramienta de expresión. Cada Lip Combo está pensado para durar, cuidar y complementar la personalidad de quien lo usa.</p>
+          <ul style="color:var(--muted); margin-top:12px">
+            <li>Fórmulas confortables, sin resecar</li>
+            <li>Elevado control de color y pigmentación</li>
+            <li>Packaging reciclable con acabado premium</li>
+          </ul>
+        </div>
+
+        <div class="card-about fade-in">
+          <h3>Compromisos</h3>
+          <p>Ingredientes evaluados y pruebas de calidad. Envasado con empaque mate «soft touch», foil champagne y un interior con detalle zafiro que hace special un unboxing.</p>
+          <p style="margin-top:10px; color:var(--muted)"><strong>Ediciones limitadas</strong> cada temporada con colores exclusivos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="galeria">
+      <div class="section-title">
+        <h2>Galería</h2>
+        <p>Inspiración y fotos reales del producto en uso.</p>
+      </div>
+
+      <div class="gallery fade-in">
+        <img src="imagenes/cientificocosmetico.avif" alt="">
+        <img src="imagenes/balsamossinmarca.avif" alt="">
+        <img src="imagenes/logogrande.png" alt="">
+        <img src="imagenes/ZAPHIREMUCKUP.png" alt="">
+      </div>
+    </section>
+
+    <!-- NEWSLETTER + CONTACT -->
+    <section>
+      <div class="container" style="max-width:var(--max-width)">
+        <div style="display:flex; gap:18px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+          <div style="flex:1 1 420px">
+            <div style="margin-bottom:14px">
+              <h3 style="font-family:'Playfair Display', serif; color:var(--champagne); margin:0">Sé parte de ZAPHIRE</h3>
+              <p style="color:var(--muted); margin:6px 0 0">Suscríbete para lanzamientos VIP, edición limitada y beneficios exclusivos.</p>
+            </div>
+
+            <div class="newsletter">
+              <input id="email" type="email" placeholder="Tu correo electrónico" aria-label="correo electronico">
+              <button onclick="subscribe()">Suscribirme</button>
+            </div>
+          </div>
+
+          <div style="flex:1 1 300px; margin-top:8px">
+            <h4 style="margin:0; color:var(--muted); font-size:14px">Contacto rápido</h4>
+            <p style="margin:6px 0 0; color:var(--muted)">¿Preguntas sobre envíos o materiales? Escribe abajo.</p>
+          </div>
+        </div>
+
+        <div id="contacto" style="margin-top:22px;">
+          <form id="contactForm" onsubmit="event.preventDefault(); sendContact();">
+            <div style="display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));">
+              <input required placeholder="Nombre" id="name" style="padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--blanco)">
+              <input required placeholder="Correo" id="emailContact" type="email" style="padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--blanco)">
+            </div>
+            <textarea required id="message" placeholder="Tu mensaje" style="width:100%; margin-top:12px; padding:12px; border-radius:10px; min-height:110px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--blanco)"></textarea>
+            <div style="display:flex; gap:12px; margin-top:10px">
+              <button class="btn-primary" type="submit">Enviar Mensaje</button>
+              <button type="button" class="btn-outline" onclick="document.getElementById('contactForm').reset()">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <div style="display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+        <div style="display:flex; gap:12px; align-items:center">
+          <div class="logo-mark" style="width:46px;height:46px"><strong>Z</strong></div>
+          <div>
+            <strong style="display:block; color:var(--champagne); font-family:'Playfair Display', serif">ZAPHIRE</strong>
+            <small style="color:var(--muted)">Lujo joven · Lip Combos · Edición Luxe</small>
+          </div>
+        </div>
+
+        <nav style="display:flex; gap:12px; align-items:center">
+          <a href="#coleccion">Colección</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+
+      <div style="margin-top:18px; text-align:center; color:rgba(248,247,242,0.6)">
+        © <span id="year"></span> ZAPHIRE Cosmetics — Todos los derechos reservados.
+      </div>
+    </footer>
+  </main>
+
+  <!-- PRODUCT MODAL -->
+  <div id="productModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card" role="document">
+      <div class="img">
+        <img id="modalImg" src="" alt="Producto">
+      </div>
+      <div class="info">
+        <button class="close-btn" style="float:right" onclick="closeModal()">Cerrar ✕</button>
+        <h3 id="modalTitle">Título Producto</h3>
+        <p id="modalDesc" style="color:var(--muted)">Descripción corta del producto.</p>
+        <p style="margin-top:12px"><strong class="amount" id="modalPrice" style="color:var(--champagne)">$0.00</strong></p>
+
+        <div style="margin-top:18px; display:flex; gap:10px; align-items:center">
+          <label for="qty" style="color:var(--muted)">Cantidad</label>
+          <select id="qty" style="padding:8px; border-radius:8px; background:transparent; color:var(--blanco); border:1px solid rgba(255,255,255,0.04)">
+            <option>1</option><option>2</option><option>3</option>
+          </select>
+          <button class="btn-primary" onclick="addToCart()">Añadir al carrito</button>
+        </div>
+
+        <div style="margin-top:12px; color:var(--muted); font-size:13px">
+          <p><strong>Material del empaque:</strong> Cartón premium, acabado mate soft touch, foil champagne.</p>
+          <p style="margin-top:6px"><strong>Tiempo de envío:</strong> 3–7 días hábiles (según ubicación).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Datos de ejemplo para el modal
+    const previewProducts = [
+      {
+        title: "Ruby Champagne",
+        desc: "Rojo intenso · Acabado velvet. Combina labial matte + gloss iluminador.",
+        price: "$24.99",
+        img: "https://cdn.pixabay.com/photo/2017/08/06/18/41/lipstick-2591765_1280.jpg"
+      },
+      {
+        title: "Nude Velvet",
+        desc: "Nude cálido · Cómodo y natural, perfecto para el día a día.",
+        price: "$22.50",
+        img: "https://cdn.pixabay.com/photo/2019/11/17/18/02/makeup-4633891_1280.jpg"
+      },
+      {
+        title: "Pink Luxe",
+        desc: "Rosa sofisticado con brillo sutil. Edición suave y femenina.",
+        price: "$23.50",
+        img: "https://cdn.pixabay.com/photo/2019/07/06/14/16/makeup-4320606_1280.jpg"
+      },
+      {
+        title: "Vino Nocturno",
+        desc: "Borgoña intenso para noches especiales. Alta pigmentación.",
+        price: "$26.00",
+        img: "https://cdn.pixabay.com/photo/2018/01/15/07/51/lipstick-3083341_1280.jpg"
+      }
+    ];
+
+    // Abrir modal con producto
+    function openModal(product){
+      const modal = document.getElementById('productModal');
+      document.getElementById('modalImg').src = product.img;
+      document.getElementById('modalTitle').textContent = product.title;
+      document.getElementById('modalDesc').textContent = product.desc;
+      document.getElementById('modalPrice').textContent = product.price;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+    }
+
+    function closeModal(){
+      const modal = document.getElementById('productModal');
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+    }
+
+    // Demo: añadir al carrito (solo visual)
+    function addToCart(){
+      alert('Añadido al carrito ✔️');
+      closeModal();
+    }
+
+    // Newsletter subscribe (falso)
+    function subscribe(){
+      const email = document.getElementById('email').value;
+      if(!email){ alert('Ingresa tu correo'); return; }
+      alert('Gracias — agregado a la lista VIP ✔️');
+      document.getElementById('email').value = '';
+    }
+
+    // Contact form (simulado)
+    function sendContact(){
+      const name = document.getElementById('name').value || 'Amigo ZAPHIRE';
+      alert('Gracias '+name+', recibimos tu mensaje. Te contactamos pronto.');
+      document.getElementById('contactForm').reset();
+    }
+
+    // Year dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Cerrar modal con ESC y click fuera
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') closeModal();
+    });
+    document.getElementById('productModal').addEventListener('click', (e)=>{
+      if(e.target.id === 'productModal') closeModal();
+    });
+  </script>
+</body>
+</html>
